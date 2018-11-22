@@ -1,0 +1,572 @@
+@import 'const.styl'
+::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+  background-color: #F5F5F5;
+}
+
+html {
+  font-size: 10vw;
+  font-family: -apple-system, Helvetica, sans-serif;
+  overflow-x: hidden;
+}
+
+@media screen and (min-width: 320px) {
+  html {
+    font-size: 11vw
+  }
+}
+
+@media screen and (min-width: 321px) and (max-width: 400px) {
+  html {
+    font-size: 10vw
+  }
+}
+
+@media screen and (min-width: 400px) and (max-width: 500px) {
+  html {
+    font-size: 9vw
+  }
+}
+
+@media screen and (min-width: 500px) and (max-width: 600px) {
+  html {
+    font-size: 8vw
+  }
+}
+
+@media screen and (min-width: 600px) and (max-width: 700px) {
+  html {
+    font-size: 7vw
+  }
+}
+
+@media screen and (min-width: 700px) and (max-width: 800px) {
+  html {
+    font-size: 6vw
+  }
+}
+
+
+@media screen and (min-width: 800px) and (max-width: 900px) {
+  html {
+    font-size: 5vw
+  }
+}
+
+
+@media screen and (min-width: 900px) and (max-width: 1000px) {
+  html {
+    font-size: 4vw
+  }
+}
+
+
+@media screen and (min-width: 1000px) and (max-width: 1900px) {
+  html {
+    font-size: 3vw
+  }
+}
+
+
+@media screen and (min-width: 1900px) {
+  html {
+    font-size: 2vw
+  }
+}
+
+html, body {
+  -webkit-touch-callout: none;
+  -webkit-text-size-adjust: none;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -webkit-user-select: none;
+  width: 100%;
+}
+
+body {
+  line-height: 1.5;
+  color: #212121;
+  background-color: #f5f5f5;
+  outline: 0;
+  font-size: 28px;
+  max-width: max_bd_w; /*no*/
+  margin: 0 auto;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-size: 100%;
+  margin: 0;
+  font-weight: 400;
+}
+
+form, ul, ol, dl, dd, p {
+  margin: 0;
+}
+
+ul, ol {
+  list-style-type: none;
+  padding: 0;
+}
+
+img {
+  border: 0 none;
+  vertical-align: bottom;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-user-select: none;
+  -webkit-tap-highlight-color: transparent;
+  outline: none;
+  word-break: break-all;
+  word-wrap: break-word;
+}
+
+ul, li {
+  list-style: none;
+}
+
+p {
+  font-size: 28px;
+  color: #757575;
+}
+
+a {
+  color: #0062cc;
+  text-decoration: none;
+  background-color: transparent;
+}
+
+a:hover {
+  outline: 0;
+}
+
+textarea {
+  overflow: hidden;
+  resize: none;
+}
+
+button {
+  overflow: visible;
+}
+
+button, select {
+  text-transform: none;
+}
+
+button, input, select, textarea {
+  font: inherit;
+  color: inherit;
+}
+
+/*常用 start*/
+
+/**屏幕下方弹出提示toastMsg**/
+.j-toast-content {
+  position: fixed;
+  bottom: 180px;
+  left: 50%;
+  max-width: 400px;
+  background-color: rgba(0, 0, 0, 0.7);
+  padding: 20px;
+  font-size: 28px;
+  border-radius: 20px;
+  text-align: center;
+  color: #fff;
+  z-index: 19921127;
+  transform: translate(-50%);
+}
+
+/**按压响应**/
+.tap-mode:active, .tap-mode:focus {
+  color: #a2a9b6
+
+}
+
+.tap-mode-bg:active, .tap-mode-bg:focus {
+  background-color: #f5f5f5;
+  -webkit-transition: background-color 0.2s linear;
+  transition: background-color 0.2s linear;
+}
+
+.tap-mode-op {
+  opacity: 1;
+}
+
+.tap-mode-op:active, .tap-mode-op:focus {
+  opacity: .8;
+  -webkit-transition: background-color 0.2s linear;
+  transition: background-color 0.2s linear;
+}
+
+.active {
+  color: #e8473f;
+}
+
+.hide {
+  display: none
+}
+
+/**color**/
+.dark {
+  color: #212121
+}
+
+.red {
+  color: #e8473f
+}
+
+.gray {
+  color: #757575
+}
+
+.white {
+  color: #fff
+}
+
+.orange {
+  color: #f78336
+}
+
+.yellow {
+  color: #fdb44c
+}
+
+.blue {
+  color: #5499e4
+}
+
+.green {
+  color: #009688
+}
+
+.bg-red {
+  background-color: #e8473f
+}
+
+.bg-gray {
+  background-color: #a2a9b6
+}
+
+.bg-white {
+  background-color: #fff
+}
+
+.bg-orange {
+  background-color: #F96E11
+}
+
+.bg-yellow {
+  background-color: #fdb44c
+}
+
+.bg-green {
+  background-color: #009688
+}
+
+.bg-blue {
+  background-color: #00bcd4
+}
+
+/** font-size **/
+.f0 {
+  font-size: 0
+}
+
+.f10 {
+  font-size: 20px
+}
+
+.f12 {
+  font-size: 24px
+}
+
+.f13 {
+  font-size: 26px
+}
+
+.f14 {
+  font-size: 28px
+}
+
+.f16 {
+  font-size: 32px
+}
+
+.f18 {
+  font-size: 36px
+}
+
+.f20 {
+  font-size: 40px
+}
+
+.f22 {
+  font-size: 44px
+}
+
+.f24 {
+  font-size: 48px
+}
+
+.f28 {
+  font-size: 56px
+}
+
+.f30 {
+  font-size: 60px
+}
+
+/*内外边距*/
+.u-pt5 {
+  padding-top: 10px
+}
+
+.u-pt10 {
+  padding-top: 20px
+}
+
+.u-pt15 {
+  padding-top: 30px
+}
+
+.u-pb0 {
+  padding-bottom: 0
+}
+
+.u-pb5 {
+  padding-bottom: 10px
+}
+
+.u-pb10 {
+  padding-bottom: 20px
+}
+
+.u-pb15 {
+  padding-bottom: 30px
+}
+
+.u-pl5 {
+  padding-left: 10px
+}
+
+.u-pl10 {
+  padding-left: 20px
+}
+
+.u-pl15 {
+  padding-left: 30px
+}
+
+.u-pr5 {
+  padding-right: 10px
+}
+
+.u-pr10 {
+  padding-right: 20px
+}
+
+.u-pr15 {
+  padding-right: 30px
+}
+
+.u-mt5 {
+  margin-top: 10px
+}
+
+.u-mt10 {
+  margin-top: 20px
+}
+
+.u-mt15 {
+  margin-top: 30px
+}
+
+.u-mb5 {
+  margin-bottom: 10px
+}
+
+.u-mb10 {
+  margin-bottom: 20px
+}
+
+.u-mb15 {
+  margin-bottom: 30px
+}
+
+.u-ml5 {
+  margin-left: 10px
+}
+
+.u-ml10 {
+  margin-left: 20px
+}
+
+.u-ml15 {
+  margin-left: 30px
+}
+
+.u-mr5 {
+  margin-right: 10px
+}
+
+.u-mr10 {
+  margin-right: 20px
+}
+
+.u-mr15 {
+  margin-right: 30px
+}
+
+/*文字对齐*/
+.u-tx-j {
+  text-align: justify;
+}
+
+.u-tx-c {
+  text-align: center;
+}
+
+.u-tx-r {
+  text-align: right;
+}
+
+/*浮动*/
+.u-pull-r {
+  float: right;
+}
+
+.u-pull-l {
+  float: left;
+}
+
+.u-clear:after {
+  content: '';
+  display: table;
+  clear: both;
+}
+
+/*边框样式*/
+.s-bt,
+.s-bb,
+.s-bl,
+.s-br,
+.s-btb,
+.s-b {
+  position: relative;
+}
+
+.s-bl:before, .s-br:after {
+  width: 1px; /*no*/
+  height: 100%;
+  background-color: #ddd;
+  display: block;
+  content: '';
+  position: absolute;
+  z-index: 0;
+  top: 0;
+  bottom: auto;
+  transform-origin: 100% 100%;
+  pointer-events: none;
+}
+
+.s-bt:before, .s-bb:after {
+  width: 100%;
+  height: 1px; /*no*/
+  background-color: #dddddd;
+  display: block;
+  content: '';
+  position: absolute;
+  z-index: 1;
+  left: 0;
+  right: auto;
+  pointer-events: none;
+}
+
+.s-bl:before {
+  right: auto;
+  left: 0;
+  transform-origin: 0 50%;
+}
+
+.s-br:after {
+  right: 0;
+  left: auto;
+  transform-origin: 100% 50%;
+}
+
+.s-bt:before {
+  bottom: auto;
+  top: 0;
+  transform-origin: 50% 0;
+}
+
+.s-bb:after {
+  bottom: 0;
+  top: auto;
+  transform-origin: 50% 100%;
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (-webkit-min-device-pixel-ratio: 3) {
+  .s-br:after,
+  .s-bl:before {
+    transform: scaleX(0.5);
+  }
+
+  .s-bb:after,
+  .s-bt:before {
+    transform: scaleY(0.5);
+  }
+}
+
+/**new iconfont**/
+@font-face {
+  font-family: "iconfont";
+  src: url('iconfont.ttf') format('truetype');
+}
+
+.iconfont {
+  font-family: "iconfont"
+  font-size: 40px;
+  font-style: normal;
+}
+.icon-dianhua:before { content: "\e70b"; }
+
+.icon-tianqi:before { content: "\e70c"; }
+
+.icon-zhaoming:before { content: "\e70d"; }
+
+.icon-wenjianjia:before { content: "\e70e"; }
+
+.icon-shezhi:before { content: "\e70f"; }
+
+.icon-zhuye:before { content: "\e710"; }
+
+.icon-jisuanqi:before { content: "\e711"; }
+
+.icon-zhinanzhen:before { content: "\e712"; }
+
+.icon-xinxi:before { content: "\e713"; }
+
+.icon-lianxiren:before { content: "\e714"; }
+
+.icon-yingyongshangdian:before { content: "\e715"; }
+
+.icon-shizhong:before { content: "\e716"; }
+
+.icon-xiangji:before { content: "\e717"; }
+
+.icon-zhuti:before { content: "\e718"; }
+
+.icon-rili:before { content: "\e719"; }
+
+.icon-qianbao:before { content: "\e71a"; }
+
+.icon-youxi:before { content: "\e71b"; }
+
+.icon-bofangqi:before { content: "\e71c"; }
+
+.icon-ditu:before { content: "\e71d"; }
+
+.icon-beiwanglu:before { content: "\e71e"; }

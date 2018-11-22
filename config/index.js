@@ -1,6 +1,4 @@
 'use strict'
-// Template version: 1.3.1
-// see http://vuejs-templates.github.io/webpack for documentation.
 
 const path = require('path')
 
@@ -8,76 +6,39 @@ module.exports = {
   dev: {
     assetsSubDirectory: 'static',
     assetsPublicPath: '/',
+    // 代理
     proxyTable: {
       '/debug_api': {
         target: 'https://4g.tongxingzhe.cn',
         changeOrigin: true,
         ws: true,
-        pathRewrite: {'^/debug_api': ''}
+        pathRewrite: {
+          '^/debug_api': ''
+        }
       }
     },
-
-    // Various Dev Server settings
-    host: '0.0.0.0', // can be overwritten by process.env.HOST
-    port: 8081, // can be overwritten by process.env.PORT, if port is in use, a free one will be determined
-    autoOpenBrowser: false,
-    errorOverlay: true,
-    notifyOnErrors: true,
-    poll: false, // https://webpack.js.org/configuration/dev-server/#devserver-watchoptions-
-
-    // Use Eslint Loader?
-    // If true, your code will be linted during bundling and
-    // linting errors and warnings will be shown in the console.
-    useEslint: true,
-    // If true, eslint errors and warnings will also be shown in the error overlay
-    // in the browser.
-    showEslintErrorsInOverlay: true,
-
-    /**
-     * Source Maps
-     */
-
-    // https://webpack.js.org/configuration/devtool/#development
+    host: '0.0.0.0', // 指定要使用的主机。默认情况下，这是localhost。如果您希望外部可以访问，可以指定为0.0.0.0
+    port: 8081,
+    autoOpenBrowser: false, // 启动后自动打开网页
+    errorOverlay: true, // 当存在编译器错误或警告时，在浏览器中显示全屏覆盖
+    notifyOnErrors: true, // 是否在终端看到webapck运行的警告和错误
+    useEslint: true, // 是否使用eslint
+    showEslintErrorsInOverlay: true, // 是否把eslint错误显示
     devtool: 'cheap-module-eval-source-map',
-
-    // If you have problems debugging vue-files in devtools,
-    // set this to false - it *may* help
-    // https://vue-loader.vuejs.org/en/options.html#cachebusting
     cacheBusting: true,
-
     cssSourceMap: false
   },
 
   build: {
-    // Template for index.html
     index: path.resolve(__dirname, '../dist/index.html'),
-
-    // Paths
     assetsRoot: path.resolve(__dirname, '../dist'),
-    assetsSubDirectory: 'static_h5',
-    assetsPublicPath: '/micWeb/',
-    // assetsPublicPath: '//cdntest.tongxingzhe.cn/',
-    // assetsPublicPath: '//cdn.tongxingzhe.cn/',
-
-    /**
-     * Source Maps
-     */
-
-    productionSourceMap: false,
-    // https://webpack.js.org/configuration/devtool/#production
+    assetsSubDirectory: 'static',
+    assetsPublicPath: '/',
+    productionSourceMap: false, // 是否启用sourceMap
     devtool: 'source-map',
-
-    // Gzip off by default as many popular static hosts such as
-    // Surge or Netlify already gzip all static assets for you.
-    // Before setting to `true`, make sure to:
-    // npm install --save-dev compression-webpack-plugin
     productionGzip: false,
     productionGzipExtensions: ['js', 'css'],
-
-    // Run the build command with an extra argument to
-    // View the bundle analyzer report after build finishes:
-    // `npm run build --report`
-    // Set to `true` or `false` to always turn it on or off
+    // 使用`npm run build --report`对模块进行分析
     bundleAnalyzerReport: process.env.npm_config_report
   }
 }

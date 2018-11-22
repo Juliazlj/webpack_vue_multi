@@ -90,10 +90,6 @@ exports.styleLoaders = function (options) {
 }
 exports.allEntries = (function () {
   const entries = {}
-  glob.sync('./src/js/**/*.js').forEach(path => {
-    const chunk = path.split('/js/')[1].split('.js')[0]
-    entries[chunk] = path
-  })
   glob.sync('./src/pages/**/page.js').forEach(path => {
     const chunk = path.split('/pages/')[1].split('/page.js')[0]
     entries[chunk] = path

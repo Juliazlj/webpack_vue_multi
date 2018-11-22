@@ -1,6 +1,6 @@
 'use strict'
-require('./check-versions')()
-const args = process.argv.splice(2)
+// require('./check-versions')()
+// const args = process.argv.splice(2)
 process.env.NODE_ENV = 'production'
 
 const ora = require('ora')
@@ -9,7 +9,7 @@ const path = require('path')
 const chalk = require('chalk')
 const webpack = require('webpack')
 const config = require('../config')
-const webpackConfig = require(`./webpack.${args[0]}.conf`)
+const webpackConfig = require(`./webpack.prod.conf`)
 const spinner = ora('building for production...')
 spinner.start()
 

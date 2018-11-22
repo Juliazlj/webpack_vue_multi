@@ -1,7 +1,7 @@
 {
-  "name": "txz_h5",
-  "description": "同行者h5",
-  "author": "zhulijie@tongxingzhe.cn",
+  "name": "webpack_vue_multi",
+  "description": "webpack多页应用",
+  "author": "408934141@qq.com",
   "private": true,
   "scripts": {
     "dev": "webpack-dev-server --inline --progress --mode development --config build/webpack.dev.conf.js",
@@ -9,7 +9,7 @@
     "build": "node build/build.js"
   },
   "dependencies": {
-    "vue": "^2.5.16"
+    "vue": "^2.5.17"
   },
   "devDependencies": {
     "autoprefixer": "^9.3.1",
@@ -36,14 +36,18 @@
     "html-webpack-plugin": "^4.0.0-alpha",
     "mini-css-extract-plugin": "^0.4.4",
     "node-notifier": "^5.3.0",
+    "optimize-css-assets-webpack-plugin": "^5.0.1",
+    "ora": "^3.0.0",
     "postcss-loader": "^3.0.0",
     "postcss-px2rem": "^0.3.0",
     "stylus": "^0.54.5",
     "stylus-loader": "^3.0.2",
+    "uglifyjs-webpack-plugin": "^2.0.1",
     "url-loader": "^1.1.2",
     "vue-loader": "^15.4.2",
     "vue-template-compiler": "^2.5.17",
     "webpack": "^4.26.0",
+    "webpack-bundle-analyzer": "^3.0.3",
     "webpack-cli": "^3.1.2",
     "webpack-dev-server": "^3.1.10",
     "webpack-merge": "^4.1.4"
