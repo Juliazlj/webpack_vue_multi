@@ -66,6 +66,7 @@ module.exports = {
       '@': resolve('src'),
       css: resolve('src/css'),
       img: resolve('src/img'),
+      pages: resolve('src/pages'),
       'jquery': 'jquery',
       layout: resolve('src/layout'),
       comps: resolve('src/components')

@@ -447,6 +447,20 @@ button, input, select, textarea {
   clear: both;
 }
 
+/*flex布局*/
+.g-flex
+  display: flex;
+  justify-content: space-between;
+  position relative
+
+  &.align-c
+    align-items center
+
+.g-flex-c
+  flex 1
+  position relative
+  min-width 0
+
 /*边框样式*/
 .s-bt,
 .s-bb,
@@ -526,47 +540,96 @@ button, input, select, textarea {
   src: url('iconfont.ttf') format('truetype');
 }
 
+.icon-svg {
+  width: 2em;
+  height: 2em;
+  vertical-align: -0.15em;
+  fill: currentColor;
+  overflow: hidden;
+}
+
 .iconfont {
   font-family: "iconfont"
   font-size: 40px;
   font-style: normal;
 }
-.icon-dianhua:before { content: "\e70b"; }
 
-.icon-tianqi:before { content: "\e70c"; }
+.icon-dianhua:before {
+  content: "\e70b";
+}
 
-.icon-zhaoming:before { content: "\e70d"; }
+.icon-tianqi:before {
+  content: "\e70c";
+}
 
-.icon-wenjianjia:before { content: "\e70e"; }
+.icon-zhaoming:before {
+  content: "\e70d";
+}
 
-.icon-shezhi:before { content: "\e70f"; }
+.icon-wenjianjia:before {
+  content: "\e70e";
+}
 
-.icon-zhuye:before { content: "\e710"; }
+.icon-shezhi:before {
+  content: "\e70f";
+}
 
-.icon-jisuanqi:before { content: "\e711"; }
+.icon-zhuye:before {
+  content: "\e710";
+}
 
-.icon-zhinanzhen:before { content: "\e712"; }
+.icon-jisuanqi:before {
+  content: "\e711";
+}
 
-.icon-xinxi:before { content: "\e713"; }
+.icon-zhinanzhen:before {
+  content: "\e712";
+}
 
-.icon-lianxiren:before { content: "\e714"; }
+.icon-xinxi:before {
+  content: "\e713";
+}
 
-.icon-yingyongshangdian:before { content: "\e715"; }
+.icon-lianxiren:before {
+  content: "\e714";
+}
 
-.icon-shizhong:before { content: "\e716"; }
+.icon-yingyongshangdian:before {
+  content: "\e715";
+}
 
-.icon-xiangji:before { content: "\e717"; }
+.icon-shizhong:before {
+  content: "\e716";
+}
 
-.icon-zhuti:before { content: "\e718"; }
+.icon-xiangji:before {
+  content: "\e717";
+}
 
-.icon-rili:before { content: "\e719"; }
+.icon-zhuti:before {
+  content: "\e718";
+}
 
-.icon-qianbao:before { content: "\e71a"; }
+.icon-rili:before {
+  content: "\e719";
+}
 
-.icon-youxi:before { content: "\e71b"; }
+.icon-qianbao:before {
+  content: "\e71a";
+}
 
-.icon-bofangqi:before { content: "\e71c"; }
+.icon-youxi:before {
+  content: "\e71b";
+}
 
-.icon-ditu:before { content: "\e71d"; }
+.icon-bofangqi:before {
+  content: "\e71c";
+}
 
-.icon-beiwanglu:before { content: "\e71e"; }
+.icon-ditu:before {
+  content: "\e71d";
+}
+
+.icon-beiwanglu:before {
+  content: "\e71e";
+}
