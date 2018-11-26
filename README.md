@@ -1,6 +1,7 @@
 
 基于webpack4和vue2的多页应用示例，根据vue-cli修改而来
 
+```text
 ├─build
 ├─config
 └─src
@@ -15,3 +16,4 @@
     │  │  └─components // 页面里的组件
     │  └─new_page // 新页面
     └─utils // 工具
+```
