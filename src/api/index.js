@@ -1,5 +1,3 @@
-import CVal from '@/utils/ConstVal'
-import Lang from '@/utils/Lang'
 import Tips from '@/utils/Tips'
 
 const baseURL = process.env.NODE_ENV === 'development' ? '/debug_api' : '' // 因为我本地做了反向代理
@@ -20,18 +18,10 @@ const isSuccess = res => {
 }
 const ajax = ({method, url, data = {}, type = 'json', doException = true}) => {
   return new Promise((resolve, reject) => {
-    let uInfo = Lang.getStorage(CVal.STORE_USER_NAME)
     data = Object.assign(data, {t: new Date().getTime()})
-    let token
-    if (uInfo) {
-      token = uInfo.token
-    }
     $.ajax({
       type: method,
       url: url.indexOf('http') === 0 ? url : baseURL + url,
-      headers: {
-        'Authorization': token
-      },
       data: data,
       dataType: type,
       success: function (res) {

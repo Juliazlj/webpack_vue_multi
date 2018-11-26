@@ -9,7 +9,7 @@ module.exports = {
     // 代理
     proxyTable: {
       '/debug_api': {
-        target: 'https://4g.tongxingzhe.cn',
+        target: '...', // 改为你的远程ajax服务器地址
         changeOrigin: true,
         ws: true,
         pathRewrite: {
